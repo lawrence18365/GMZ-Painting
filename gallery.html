@@ -108,14 +108,14 @@
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
         
         .gallery-item {
             background-color: var(--light-bg);
-            padding: 1rem;
             border-radius: 15px;
+            overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -127,19 +127,9 @@
         
         .gallery-item img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-        
-        .gallery-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-        
-        .gallery-item p {
-            font-size: 1rem;
-            color: var(--text-color);
+            height: 200px;
+            object-fit: cover;
+            display: block;
         }
         
         footer {
@@ -166,7 +156,7 @@
         
         @media (max-width: 768px) {
             .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
         }
     </style>
@@ -198,34 +188,61 @@
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="/api/placeholder/400/320" alt="Modern Living Room">
-                        <h3>Modern Living Room</h3>
-                        <p>Sleek and contemporary design with neutral tones</p>
+                        <img src="https://i.ibb.co/NC33p03/1.png" alt="Painting project 1">
                     </div>
                     <div class="gallery-item">
-                        <img src="/api/placeholder/400/320" alt="Cozy Bedroom">
-                        <h3>Cozy Bedroom</h3>
-                        <p>Warm and inviting color scheme for ultimate relaxation</p>
+                        <img src="https://i.ibb.co/cFkqtxj/2.png" alt="Painting project 2">
                     </div>
                     <div class="gallery-item">
-                        <img src="/api/placeholder/400/320" alt="Elegant Dining Room">
-                        <h3>Elegant Dining Room</h3>
-                        <p>Sophisticated color palette for formal dining spaces</p>
+                        <img src="https://i.ibb.co/WG5TQTr/3.png" alt="Painting project 3">
                     </div>
                     <div class="gallery-item">
-                        <img src="/api/placeholder/400/320" alt="Vibrant Kitchen">
-                        <h3>Vibrant Kitchen</h3>
-                        <p>Bold and energetic colors to inspire culinary creativity</p>
+                        <img src="https://i.ibb.co/vJS0325/4.png" alt="Painting project 4">
                     </div>
                     <div class="gallery-item">
-                        <img src="/api/placeholder/400/320" alt="Serene Bathroom">
-                        <h3>Serene Bathroom</h3>
-                        <p>Calming blues and whites for a spa-like atmosphere</p>
+                        <img src="https://i.ibb.co/x1KHz4m/5.png" alt="Painting project 5">
                     </div>
                     <div class="gallery-item">
-                        <img src="/api/placeholder/400/320" alt="Rustic Exterior">
-                        <h3>Rustic Exterior</h3>
-                        <p>Earth tones that complement natural surroundings</p>
+                        <img src="https://i.ibb.co/3fPjQD5/6.png" alt="Painting project 6">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/z4Qc4BF/7.png" alt="Painting project 7">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/y6nC1gM/8.png" alt="Painting project 8">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/dL8f9N1/9.png" alt="Painting project 9">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/Dg1Ng4N/10.png" alt="Painting project 10">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/58DF79B/11.png" alt="Painting project 11">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/fXbSNm2/12.png" alt="Painting project 12">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/CW8Rc5N/13.png" alt="Painting project 13">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/sv4Bz0v/14.png" alt="Painting project 14">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/sVcWVhG/15.png" alt="Painting project 15">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/NCpVPhR/16.png" alt="Painting project 16">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/p2CrXTk/17.png" alt="Painting project 17">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/1Mk5ZCb/18.png" alt="Painting project 18">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ibb.co/hWym7zq/19.png" alt="Painting project 19">
                     </div>
                 </div>
             </div>
