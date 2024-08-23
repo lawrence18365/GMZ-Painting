@@ -7,6 +7,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
 <style>
+    .about {
+        background-color: #2c3e50;
+        color: #ffffff;
+        padding: 4rem 0;
+    }
+
+    .about-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .about-image {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    .about-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .about-text {
+        flex: 2;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #e67e22;
+    }
+
+    .about-text h3 {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #e67e22;
+    }
+
+    .about-text p, .about-text ul {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .about-text ul {
+        list-style-type: none;
+        padding-left: 1rem;
+    }
+
+    .about-text ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .about-highlights {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        margin-top: 2rem;
+    }
+
+    .about-highlights ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .about-highlights ul li i {
+        color: #e67e22;
+        margin-right: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            flex-direction: column;
+        }
+
+        .about-image {
+            max-width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #e67e22;
@@ -27,7 +109,6 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--light-bg);
-            padding-top: 80px; /* Add padding to account for fixed header */
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -198,36 +279,23 @@
         }
         
         .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
         }
         
-        .about-text h2 {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
+        .about-text {
+            flex: 1;
         }
         
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
+        .about-image {
+            flex: 1;
         }
         
-        .about-text p, .about-text ul {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .about-text ul {
-            list-style-type: none;
-            padding-left: 1rem;
-        }
-        
-        .about-text ul li {
-            margin-bottom: 0.5rem;
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
         
         .about-highlights {
@@ -237,16 +305,19 @@
             margin-top: 2rem;
         }
         
+        .about-highlights ul {
+            list-style-type: none;
+        }
+        
         .about-highlights ul li {
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
         }
         
         .about-highlights ul li i {
             color: var(--secondary-color);
-            margin-right: 1rem;
+            margin-right: 0.5rem;
         }
         
         .testimonials {
@@ -279,24 +350,15 @@
         }
         
         .cta {
-            background-color: var(--light-bg);
+            background-color: var(--secondary-color);
             text-align: center;
             padding: 6rem 0;
-            color: var(--primary-color);
-        }
-        
-        .cta-content {
-            background-color: var(--secondary-color);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            border-radius: 15px;
+            color: var(--white);
         }
         
         .cta h2 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: var(--white);
         }
         
         .cta p {
@@ -305,7 +367,6 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            color: var(--white);
         }
         
         .contact {
@@ -382,6 +443,10 @@
                 font-size: 2.5rem;
             }
             
+            .about-content {
+                flex-direction: column;
+            }
+            
             .contact-content {
                 flex-direction: column;
             }
@@ -442,37 +507,36 @@
         </section>
         
         <section id="about" class="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>GMZ Painting Service</h2>
-                        <p>For over 15 years, GMZ Painting Service has been the go-to choice for discerning clients in Matraville and beyond. Our team of master painters combines time-honored techniques with innovative approaches to deliver unparalleled results.</p>
-                        
-                        <h3>We pride ourselves on:</h3>
-                        <ul>
-                            <li>Meticulous attention to detail</li>
-                            <li>Use of premium materials</li>
-                            <li>Ability to bring even the most ambitious visions to life</li>
-                        </ul>
-                        
-<p>From intimate residential projects to large-scale commercial undertakings, we approach every job with the same level of dedication and expertise.</p>
-                        
-                        <div class="about-highlights">
-                            <h3>Why Choose GMZ Painting:</h3>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Fully licensed and insured professionals</li>
-                                <li><i class="fas fa-check"></i> 15+ years of industry-leading experience</li>
-                                <li><i class="fas fa-check"></i> Eco-friendly and low-VOC paint options</li>
-                                <li><i class="fas fa-check"></i> Tailored color consultations</li>
-                                <li><i class="fas fa-check"></i> Stringent quality control measures</li>
-                                <li><i class="fas fa-check"></i> 100% satisfaction guarantee</li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>GMZ Painting Service</h2>
+                <p>For over 15 years, GMZ Painting Service has been the go-to choice for discerning clients in Matraville and beyond. Our team of master painters combines time-honored techniques with innovative approaches to deliver unparalleled results.</p>
+                
+                <h3>We pride ourselves on:</h3>
+                <ul>
+                    <li>Meticulous attention to detail</li>
+                    <li>Use of premium materials</li>
+                    <li>Ability to bring even the most ambitious visions to life</li>
+                </ul>
+                
+                <p>From intimate residential projects to large-scale commercial undertakings, we approach every job with the same level of dedication and expertise.</p>
+                
+                <div class="about-highlights">
+                    <h3>Why Choose GMZ Painting:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Fully licensed and insured professionals</li>
+                        <li><i class="fas fa-check"></i> 15+ years of industry-leading experience</li>
+                        <li><i class="fas fa-check"></i> Eco-friendly and low-VOC paint options</li>
+                        <li><i class="fas fa-check"></i> Tailored color consultations</li>
+                        <li><i class="fas fa-check"></i> Stringent quality control measures</li>
+                        <li><i class="fas fa-check"></i> 100% satisfaction guarantee</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        
+        </div>
+    </div>
+</section>
         <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="section-title">
@@ -504,11 +568,9 @@
         
         <section class="cta">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Transform Your Space?</h2>
-                    <p>Experience the GMZ difference. Contact us today for a personalized consultation and quote.</p>
-                    <a href="#contact" class="btn">Get Started</a>
-                </div>
+                <h2>Ready to Transform Your Space?</h2>
+                <p>Experience the GMZ difference. Contact us today for a personalized consultation and quote.</p>
+                <a href="#contact" class="btn">Get Started</a>
             </div>
         </section>
         
