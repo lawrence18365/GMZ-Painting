@@ -1,82 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head><base href="https://lawrence18365.github.io/GMZ-Painting/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMZ Painting Service - Matraville's Premier Professional Painters</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
+<style>
+    .about {
+        background-color: #2c3e50;
+        color: #ffffff;
+        padding: 4rem 0;
+    }
 
- .about {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 4rem 0;
-            text-align: center; /* Center all text in the about section */
-        }
+    .about-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .about-image {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    .about-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .about-text {
+        flex: 2;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #e67e22;
+    }
+
+    .about-text h3 {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #e67e22;
+    }
+
+    .about-text p, .about-text ul {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .about-text ul {
+        list-style-type: none;
+        padding-left: 1rem;
+    }
+
+    .about-text ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .about-highlights {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        margin-top: 2rem;
+    }
+
+    .about-highlights ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .about-highlights ul li i {
+        color: #e67e22;
+        margin-right: 1rem;
+    }
+
+    @media (max-width: 768px) {
         .about-content {
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items horizontally */
-            gap: 4rem;
+            flex-direction: column;
         }
+
         .about-image {
-            max-width: 400px;
-            width: 100%;
+            max-width: 100%;
+            margin-bottom: 2rem;
         }
-        .about-image img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        .about-text {
-            max-width: 800px; /* Limit the width for better readability */
-            width: 100%;
-        }
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #e67e22;
-        }
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #e67e22;
-        }
-        .about-text p, .about-text ul {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        .about-text ul {
-            list-style-type: none;
-            padding-left: 0; /* Remove left padding for center alignment */
-        }
-        .about-text ul li {
-            margin-bottom: 0.5rem;
-        }
-        .about-highlights {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-top: 2rem;
-        }
-        .about-highlights ul li {
-            display: flex;
-            align-items: center;
-            justify-content: center; /* Center list items */
-            margin-bottom: 1rem;
-        }
-        .about-highlights ul li i {
-            color: #e67e22;
-            margin-right: 1rem;
-        }
-        @media (max-width: 768px) {
-            .about-image {
-                max-width: 100%;
-                margin-bottom: 2rem;
-            }
-        }
+    }
+        :root {
             --primary-color: #2c3e50;
             --secondary-color: #e67e22;
             --accent-color: #3498db;
@@ -275,6 +288,16 @@
             flex: 1;
         }
         
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
         .about-highlights {
             background-color: rgba(255, 255, 255, 0.1);
             padding: 2rem;
@@ -439,9 +462,9 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./#services">Services</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
                     </ul>
                 </nav>
             </div>
@@ -483,33 +506,40 @@
             </div>
         </section>
         
-   <section class="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-image">
-                        <img src="path/to/your/about-image.jpg" alt="GMZ Painting Service Team">
-                    </div>
-                    <div class="about-text">
-                        <h2>About GMZ Painting Service</h2>
-                        <p>GMZ Painting Service is your trusted partner for all your painting needs. With years of experience and a passion for perfection, we transform spaces into works of art.</p>
-                        
-                        <h3>Our Commitment</h3>
-                        <p>We are committed to delivering exceptional quality, professionalism, and customer satisfaction in every project we undertake.</p>
-                        
-                        <div class="about-highlights">
-                            <h3>Why Choose Us</h3>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Expert painters with years of experience</li>
-                                <li><i class="fas fa-check"></i> High-quality materials and techniques</li>
-                                <li><i class="fas fa-check"></i> Attention to detail and clean work areas</li>
-                                <li><i class="fas fa-check"></i> Timely project completion</li>
-                                <li><i class="fas fa-check"></i> Excellent customer service</li>
-                            </ul>
-                        </div>
-                    </div>
+        <section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://page-images.websim.ai/GMZ%20Painting%20Service%20expert%20team_600x400xzYl7UIjUpDJB1tywdx54f0080042564.jpg" alt="GMZ Painting Service expert team">
+            </div>
+            <div class="about-text">
+                <h2>GMZ Painting Service</h2>
+                <p>For over 15 years, GMZ Painting Service has been the go-to choice for discerning clients in Matraville and beyond. Our team of master painters combines time-honored techniques with innovative approaches to deliver unparalleled results.</p>
+                
+                <h3>We pride ourselves on:</h3>
+                <ul>
+                    <li>Meticulous attention to detail</li>
+                    <li>Use of premium materials</li>
+                    <li>Ability to bring even the most ambitious visions to life</li>
+                </ul>
+                
+                <p>From intimate residential projects to large-scale commercial undertakings, we approach every job with the same level of dedication and expertise.</p>
+                
+                <div class="about-highlights">
+                    <h3>Why Choose GMZ Painting:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Fully licensed and insured professionals</li>
+                        <li><i class="fas fa-check"></i> 15+ years of industry-leading experience</li>
+                        <li><i class="fas fa-check"></i> Eco-friendly and low-VOC paint options</li>
+                        <li><i class="fas fa-check"></i> Tailored color consultations</li>
+                        <li><i class="fas fa-check"></i> Stringent quality control measures</li>
+                        <li><i class="fas fa-check"></i> 100% satisfaction guarantee</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
         <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="section-title">
@@ -590,32 +620,19 @@
             </div>
         </div>
     </footer>
-  <footer>
-        <div class="container">
-            <p>© 2023 GMZ Painting Service. All rights reserved.</p>
-            <p>Fully licensed and insured. License No: 123456C</p>
-            <div class="social-icons">
-                <a href="https://facebook.com/gmzpainting" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://instagram.com/gmzpainting" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/company/gmzpainting" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
 
     <script>
-        console.log("JavaScript is running");
-
         document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for on-page links
-            const navLinks = document.querySelectorAll('nav a[href^="#"], .hero-content a[href^="#"], .cta a[href^="#"]');
+            // Smooth scrolling
+            const navLinks = document.querySelectorAll('nav a, .hero-content a, .cta a');
             
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
+                    e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
                     
                     if (targetElement) {
-                        e.preventDefault();
                         window.scrollTo({
                             top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
@@ -632,11 +649,6 @@
                 } else {
                     header.style.padding = '1rem 0';
                 }
-            });
-
-            // Debug: Log click events
-            document.querySelector('nav').addEventListener('click', function(e) {
-                console.log("Nav clicked", e.target);
             });
         });
     </script>
