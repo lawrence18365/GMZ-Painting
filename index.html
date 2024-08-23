@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head><base href="https://lawrence18365.github.io/GMZ-Painting/">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMZ Painting Service - Matraville's Premier Professional Painters</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
-<style>
+
     .about {
         background-color: #2c3e50;
         color: #ffffff;
@@ -462,9 +463,9 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="./">Home</a></li>
-                        <li><a href="./#services">Services</a></li>
-                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                     </ul>
                 </nav>
             </div>
@@ -620,19 +621,32 @@
             </div>
         </div>
     </footer>
+  <footer>
+        <div class="container">
+            <p>© 2023 GMZ Painting Service. All rights reserved.</p>
+            <p>Fully licensed and insured. License No: 123456C</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/gmzpainting" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/gmzpainting" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/gmzpainting" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script>
+        console.log("JavaScript is running");
+
         document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling
-            const navLinks = document.querySelectorAll('nav a, .hero-content a, .cta a');
+            // Smooth scrolling for on-page links
+            const navLinks = document.querySelectorAll('nav a[href^="#"], .hero-content a[href^="#"], .cta a[href^="#"]');
             
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
                     
                     if (targetElement) {
+                        e.preventDefault();
                         window.scrollTo({
                             top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
@@ -649,6 +663,11 @@
                 } else {
                     header.style.padding = '1rem 0';
                 }
+            });
+
+            // Debug: Log click events
+            document.querySelector('nav').addEventListener('click', function(e) {
+                console.log("Nav clicked", e.target);
             });
         });
     </script>
