@@ -1,94 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><head><base href="https://lawrence18365.github.io/GMZ-Painting/">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMZ Painting Service - Matraville's Premier Professional Painters</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
-<style>
-    .about {
-        background-color: #2c3e50;
-        color: #ffffff;
-        padding: 4rem 0;
-    }
-
-    .about-content {
-        display: flex;
-        align-items: flex-start;
-        gap: 4rem;
-    }
-
-    .about-image {
-        flex: 1;
-        max-width: 400px;
-    }
-
-    .about-image img {
-        width: 100%;
-        border-radius: 15px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .about-text {
-        flex: 2;
-    }
-
-    .about-text h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #e67e22;
-    }
-
-    .about-text h3 {
-        font-size: 1.8rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        color: #e67e22;
-    }
-
-    .about-text p, .about-text ul {
-        margin-bottom: 1.5rem;
-        line-height: 1.8;
-    }
-
-    .about-text ul {
-        list-style-type: none;
-        padding-left: 1rem;
-    }
-
-    .about-text ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    .about-highlights {
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 2rem;
-        border-radius: 15px;
-        margin-top: 2rem;
-    }
-
-    .about-highlights ul li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-
-    .about-highlights ul li i {
-        color: #e67e22;
-        margin-right: 1rem;
-    }
-
-    @media (max-width: 768px) {
-        .about-content {
-            flex-direction: column;
-        }
-
-        .about-image {
-            max-width: 100%;
-            margin-bottom: 2rem;
-        }
-    }
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #e67e22;
@@ -112,7 +30,7 @@
         }
         
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
             line-height: 1.2;
         }
@@ -142,6 +60,7 @@
         .logo h1 {
             font-size: 1.5rem;
             color: var(--white);
+            font-weight: 700;
         }
         
         nav ul {
@@ -166,34 +85,48 @@
         }
         
         .hero {
-    background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://page-images.websim.ai/GMZ%20Painting%20Service%20expert%20team_600x400xzYl7UIjUpDJB1tywdx54f0080042564.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll; /* Changed from fixed to scroll */
-    min-height: 100vh; /* Changed from height to min-height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-align: center;
-    padding: 2rem;
-}
+            background-image: linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url('https://page-images.websim.ai/GMZ%20Painting%20Service%20expert%20team_600x400xzYl7UIjUpDJB1tywdx54f0080042564.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--white), transparent);
+        }
         
         .hero-content {
             max-width: 800px;
+            position: relative;
+            z-index: 1;
         }
         
         .hero h2 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 700;
         }
         
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2.5rem;
-            font-weight: 300;
+            font-weight: 400;
         }
         
         .btn {
@@ -229,6 +162,7 @@
             font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         
         .section-title p {
@@ -272,6 +206,7 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--primary-color);
+            font-weight: 700;
         }
         
         .about {
@@ -450,10 +385,19 @@
         }
         
         @media (max-width: 768px) {
-    .hero {
-        background-attachment: scroll;
-        background-position: center center;
-    }
+            .hero {
+                background-attachment: scroll;
+                background-position: center center;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+        }
 }
 .hero::before {
     content: '';
