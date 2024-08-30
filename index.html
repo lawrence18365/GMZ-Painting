@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GMZ Painting Service - Premier Professional Painters in Matraville">
+    <meta name="keywords" content="painting, Matraville, interior painting, exterior painting, commercial painting">
     <title>GMZ Painting Service - Premier Professional Painters in Matraville</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* CSS Custom Properties for easy theme management */
         :root {
             --primary-color: #1a2a3a;
             --secondary-color: #e67e22;
@@ -14,8 +17,10 @@
             --text-color: #333;
             --light-bg: #f5f5f5;
             --white: #ffffff;
+            --transition-speed: 0.3s;
         }
 
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -35,13 +40,14 @@
             padding: 0 2rem;
         }
 
+        /* Header styles */
         header {
             background-color: rgba(26, 42, 58, 0.9);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: padding var(--transition-speed) ease;
             backdrop-filter: blur(10px);
         }
 
@@ -59,6 +65,7 @@
             font-weight: 700;
         }
 
+        /* Navigation styles */
         nav ul {
             list-style-type: none;
             display: flex;
@@ -72,7 +79,7 @@
             color: var(--white);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
+            transition: color var(--transition-speed) ease;
             font-size: 1rem;
             position: relative;
         }
@@ -85,13 +92,14 @@
             bottom: -5px;
             left: 0;
             background-color: var(--secondary-color);
-            transition: width 0.3s ease;
+            transition: width var(--transition-speed) ease;
         }
 
         nav ul li a:hover::after {
             width: 100%;
         }
 
+        /* Hero section styles */
         .hero {
             background-image: linear-gradient(rgba(26, 42, 58, 0.7), rgba(26, 42, 58, 0.7)), url('https://page-images.websim.ai/GMZ%20Painting%20Service%20expert%20team_600x400xzYl7UIjUpDJB1tywdx54f0080042564.jpg');
             background-size: cover;
@@ -122,6 +130,7 @@
             animation: fadeInUp 1s ease-out 0.5s both;
         }
 
+        /* Button styles */
         .btn {
             display: inline-block;
             background-color: var(--secondary-color);
@@ -129,7 +138,7 @@
             padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 50px;
-            transition: all 0.3s ease;
+            transition: all var(--transition-speed) ease;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -143,6 +152,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
+        /* Section styles */
         section {
             padding: 6rem 0;
         }
@@ -166,6 +176,7 @@
             margin: 0 auto;
         }
 
+        /* Services section styles */
         .services {
             background-color: var(--white);
         }
@@ -181,7 +192,7 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
             text-align: center;
         }
 
@@ -202,6 +213,7 @@
             color: var(--primary-color);
         }
 
+        /* About section styles */
         .about {
             background-color: var(--primary-color);
             color: var(--white);
@@ -262,6 +274,7 @@
             margin-right: 1rem;
         }
 
+        /* Testimonials section styles */
         .testimonials {
             background-color: var(--light-bg);
         }
@@ -290,6 +303,7 @@
             text-align: right;
         }
 
+        /* Contact section styles */
         .contact {
             background-color: var(--white);
         }
@@ -339,6 +353,7 @@
             height: 150px;
         }
 
+        /* Footer styles */
         footer {
             background-color: var(--primary-color);
             color: var(--white);
@@ -354,13 +369,14 @@
             color: var(--white);
             font-size: 1.5rem;
             margin: 0 0.5rem;
-            transition: color 0.3s ease;
+            transition: color var(--transition-speed) ease;
         }
 
         .social-icons a:hover {
             color: var(--secondary-color);
         }
 
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -372,23 +388,24 @@
             }
         }
 
+        /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
             .hero h2 {
                 font-size: 3rem;
             }
 
-            .about-content {
+            .about-content, .contact-content {
                 flex-direction: column;
             }
 
-            .contact-content {
-                flex-direction: column;
+            .service, .testimonial {
+                margin-bottom: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
+   <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
@@ -418,26 +435,24 @@
 
         <section id="services" class="services">
             <div class="container">
-                <div class="section-title">
-                    <h2>Our Services</h2>
-                    <p>Discover our range of high-quality painting solutions tailored to your unique needs</p>
-                </div>
+                <h2 class="section-title">Our Services</h2>
+                <p>Discover our range of high-quality painting solutions tailored to your unique needs</p>
                 <div class="services-grid">
-                    <div class="service">
-                        <i class="fas fa-home"></i>
+                    <article class="service">
+                        <i class="fas fa-home" aria-hidden="true"></i>
                         <h3>Interior Painting</h3>
                         <p>Transform your living spaces with our premium interior painting services.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-building"></i>
+                    </article>
+                    <article class="service">
+                        <i class="fas fa-building" aria-hidden="true"></i>
                         <h3>Exterior Painting</h3>
                         <p>Protect and beautify your property's exterior with our durable solutions.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-briefcase"></i>
+                    </article>
+                    <article class="service">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
                         <h3>Commercial Painting</h3>
                         <p>Enhance your business environment with our efficient commercial services.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -451,73 +466,73 @@
                         <div class="about-highlights">
                             <h3>Why Choose Us:</h3>
                             <ul>
-                                <li><i class="fas fa-check"></i> Fully licensed and insured professionals</li>
-                                <li><i class="fas fa-check"></i> 25+ years of industry-leading experience</li>
-                                <li><i class="fas fa-check"></i> Eco-friendly and low-VOC paint options</li>
-                                <li><i class="fas fa-check"></i> Tailored color consultations</li>
-                                <li><i class="fas fa-check"></i> 100% satisfaction guarantee</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Fully licensed and insured professionals</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 25+ years of industry-leading experience</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Eco-friendly and low-VOC paint options</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Tailored color consultations</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 100% satisfaction guarantee</li>
                             </ul>
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="https://page-images.websim.ai/GMZ%20Painting%20Service%20expert%20team_600x400xzYl7UIjUpDJB1tywdx54f0080042564.jpg" alt="GMZ Painting Team">
+                        <img src="https://page-images.websim.ai/GMZ%20Painting%20Service%20expert%20team_600x400xzYl7UIjUpDJB1tywdx54f0080042564.jpg" alt="GMZ Painting expert team working on a project">
                     </div>
                 </div>
             </div>
         </section>
 
-<section id="testimonials" class="testimonials">
+        <section id="testimonials" class="testimonials">
             <div class="container">
-                <div class="section-title">
-                    <h2>Client Testimonials</h2>
-                    <p>Hear what our satisfied customers have to say about our services</p>
-                </div>
+                <h2 class="section-title">Client Testimonials</h2>
+                <p>Hear what our satisfied customers have to say about our services</p>
                 <div class="testimonial-grid">
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            "Moisa was honest, reliable, friendly and did a great job! He removed a floor to ceiling internal kitchen cupboard, rebuilt the ceiling above the old cupboard, reset the cornices, and painted the ceiling and adjoining wall. I would certainly hire him again and recommend him to anyone looking for an honest tradesman."
-                        </div>
-                        <div class="testimonial-author">- Helena Ward</div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            "Moisa did a fantastic job. Very nice man, polite & genuine. Would hire him again for another job if needed."
-                        </div>
-                        <div class="testimonial-author">- Maree Cameron</div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            "Excellent job! The team at GMZ Painting Service transformed our home. Their attention to detail and professionalism were outstanding."
-                        </div>
-                        <div class="testimonial-author">- Suzanne Salter</div>
-                    </div>
+                    <blockquote class="testimonial">
+                        <p>"Moisa was honest, reliable, friendly and did a great job! He removed a floor to ceiling internal kitchen cupboard, rebuilt the ceiling above the old cupboard, reset the cornices, and painted the ceiling and adjoining wall. I would certainly hire him again and recommend him to anyone looking for an honest tradesman."</p>
+                        <footer>- Helena Ward</footer>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Moisa did a fantastic job. Very nice man, polite & genuine. Would hire him again for another job if needed."</p>
+                        <footer>- Maree Cameron</footer>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Excellent job! The team at GMZ Painting Service transformed our home. Their attention to detail and professionalism were outstanding."</p>
+                        <footer>- Suzanne Salter</footer>
+                    </blockquote>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact">
             <div class="container">
-                <div class="section-title">
-                    <h2>Get in Touch</h2>
-                    <p>Ready to transform your space? Contact us for a personalized quote</p>
-                </div>
+                <h2 class="section-title">Get in Touch</h2>
+                <p>Ready to transform your space? Contact us for a personalized quote</p>
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-                        <p><i class="fas fa-phone"></i> 0418 964 106</p>
-                        <p><i class="fas fa-envelope"></i> info@gmzpaintingservice.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 45 Menin Rd, Matraville NSW 2036</p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:0418964106">0418 964 106</a></p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@gmzpaintingservice.com">info@gmzpaintingservice.com</a></p>
+                        <address>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 45 Menin Rd, Matraville NSW 2036
+                        </address>
                         <h3>Business Hours</h3>
-                        <p><i class="far fa-clock"></i> Monday - Friday: 7:00 AM - 6:00 PM</p>
-                        <p><i class="far fa-clock"></i> Saturday - Sunday: Closed</p>
+                        <p><i class="far fa-clock" aria-hidden="true"></i> Monday - Friday: 7:00 AM - 6:00 PM</p>
+                        <p><i class="far fa-clock" aria-hidden="true"></i> Saturday - Sunday: Closed</p>
                     </div>
                     <div class="contact-form">
                         <h3>Request a Consultation</h3>
                         <form action="https://formspree.io/f/mnnaojgb" method="POST">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <input type="tel" name="phone" placeholder="Your Phone Number" required>
-                            <textarea name="message" placeholder="Tell us about your project" required></textarea>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                            
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                            
+                            <label for="phone">Your Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            
+                            <label for="message">Tell us about your project</label>
+                            <textarea id="message" name="message" required></textarea>
+                            
                             <button type="submit" class="btn">Send Message</button>
                         </form>
                     </div>
@@ -531,9 +546,12 @@
             <p>&copy; 2024 GMZ Painting Service. All rights reserved.</p>
             <p>Fully licensed and insured. ABN-58983270011 | Licence-136280C</p>
             <div class="social-icons">
-                <a href="https://facebook.com/gmzpainting" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://instagram.com/gmzpainting" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/company/gmzpainting" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://facebook.com/gmzpainting" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/gmzpainting" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </footer>
@@ -541,31 +559,40 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Smooth scrolling for navigation links
+            const smoothScroll = (target) => {
+                const element = document.querySelector(target);
+                if (element) {
+                    window.scrollTo({
+                        top: element.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            };
+
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    smoothScroll(this.getAttribute('href'));
                 });
             });
 
             // Header shrink on scroll
             const header = document.querySelector('header');
-            window.addEventListener('scroll', () => {
+            const shrinkHeader = () => {
                 if (window.scrollY > 100) {
                     header.style.padding = '0.5rem 0';
                 } else {
                     header.style.padding = '1rem 0';
                 }
-            });
+            };
+            window.addEventListener('scroll', shrinkHeader);
 
             // Reveal animations on scroll
             const revealElements = document.querySelectorAll('.service, .testimonial');
             const revealElementsOnScroll = () => {
+                const windowHeight = window.innerHeight;
                 revealElements.forEach(element => {
                     const elementTop = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
                     if (elementTop < windowHeight - 100) {
                         element.style.opacity = '1';
                         element.style.transform = 'translateY(0)';
@@ -584,6 +611,19 @@
                 alert('Thank you for your message. We will get back to you soon!');
                 form.reset();
             });
+
+            // Add error handling for smooth scroll
+            const handleSmoothScrollError = (error) => {
+                console.error('Smooth scroll error:', error);
+                // Fallback to default scroll behavior
+                window.location.hash = target;
+            };
+
+            try {
+                smoothScroll();
+            } catch (error) {
+                handleSmoothScrollError(error);
+            }
         });
     </script>
 </body>
